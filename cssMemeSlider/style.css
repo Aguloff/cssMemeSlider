@@ -18,21 +18,21 @@ img {
     padding: 1em 1.5em;
     margin: 0 auto;
     background-color: #444;
-    gap: 2em;
+    border-radius: 1em;
+    gap: 1.5em;
 }
 
 .slider-block {
-    height: 80%;
     border-radius: 1em;
     overflow: hidden;
 }
 
 .slider__list {
     display: flex;
-    height: 100%;
     margin: 0;
     padding: 0;
     list-style: none;
+    transition: transform .3s ease-in-out;
 }
 
 .slider__item {
@@ -43,4 +43,71 @@ img {
 .slider-wrapper {
     display: flex;
     justify-content: space-between;
+}
+
+.slider__pagination {
+    display: flex;
+    gap: 5px;
+}
+
+input {
+    display: none;
+}
+
+label {
+    display: flex;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+label:hover .circle {
+    background-color: white;
+    border-color: white;
+}
+
+label:active .circle {
+    transform: scale(.9);
+}
+
+.circle {
+    width: 15px;
+    height: 15px;
+    margin: auto;
+    background-color: rgb(143, 178, 253);
+    border: 2px solid rgb(143, 178, 253);
+    border-radius: 50%;
+    transition: background-color .2s ease-in-out, border-color .2s ease-in-out;
+}
+
+#one:checked ~ .slider-block ul {
+    transform: translateX(0%);
+}
+
+#one:checked ~ .slider-wrapper .slider__pagination label[for="one"] span {
+    background-color: #444;
+}
+
+#two:checked ~ .slider-block ul {
+    transform: translateX(-100%);
+}
+
+#two:checked ~ .slider-wrapper .slider__pagination label[for="two"] span {
+    background-color: #444;
+}
+
+#three:checked ~ .slider-block ul {
+    transform: translateX(-200%);
+}
+
+#three:checked ~ .slider-wrapper .slider__pagination label[for="three"] span {
+    background-color: #444;
+}
+
+#four:checked ~ .slider-block ul {
+    transform: translateX(-300%);
+}
+
+#four:checked ~ .slider-wrapper .slider__pagination label[for="four"] span {
+    background-color: #444;
 }
