@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Meme Slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="slider">
+        <input type="radio" name="name" id="one" checked>
+        <input type="radio" name="name" id="two">
+        <input type="radio" name="name" id="three">
+        <input type="radio" name="name" id="four">
+        <div class="slider-block">
+            <ul class="slider__list">
+                <li class="slider__item">
+                    <img src="img/1.jpg" alt="Kim" class="slider__img">
+                </li>
+                <li class="slider__item">
+                    <img src="img/2.jpeg" alt="Luka" class="slider__img">
+                </li>
+                <li class="slider__item">
+                    <img src="img/3.jpg" alt="Pu" class="slider__img">
+                </li>
+                <li class="slider__item">
+                    <img src="img/4.jpg" alt="Si" class="slider__img">
+                </li>
+            </ul>
+        </div>
+        <div class="slider-wrapper">
+            <div class="slider__descr">
+                <span class="descr d1">- 康熙字典體</span>
+                <span class="descr d2">- А я сейчас вам покажу, откуда...</span>
+                <span class="descr d3">- Кхе, кхе</span>
+                <span class="descr d4">- 康熙字典</span>
+            </div>
+            <div class="slider__pagination">
+                <label for="one"><span class="circle"></span></label>
+                <label for="two"><span class="circle"></span></label>
+                <label for="three"><span class="circle"></span></label>
+                <label for="four"><span class="circle"></span></label>
+            </div>
+        </div>
+    </div>
+  </div>
+</body>
+</html>
